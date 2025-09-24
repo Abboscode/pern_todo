@@ -1,0 +1,126 @@
+.todo-item {
+  display: flex;
+  justify-content: space-between; /* pushes text left, button right */
+  align-items: center; /* keeps button vertically aligned */
+  padding: 4px 8px; /* adjust to match your style */
+}
+
+.todo-btn {
+  background: #4CAF50; /* example */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.todo-btn:hover {
+  background: #45a049;
+}
+
+
+@keyframes gummy-btn-hover {
+	40% {
+		transform: scale(1.05);
+		border-radius: 10px;
+	}
+	70% {
+		transform: scale(1.05);
+		border-radius: 16px;
+	}
+	100% {
+		transform: scale(1.05);
+		border-radius: 10px;
+	}
+}
+
+@keyframes gummy-btn-press {
+	75% {
+		transform: scale(0.85);
+		border-radius: 32px;
+	}
+	100% {
+		transform: scale(0.9);
+		border-radius: 20px;
+	}
+}
+
+html {
+	font-size: 20px;
+	font-family: "Sour Gummy", sans-serif;
+}
+
+
+button {
+	position: relative;
+	padding: 8px;
+	background-color: #4f5;
+	color: #000;
+	border: 3px solid #0a0;
+	border-radius: 16px;
+	font-family: inherit;
+	font-size: 0.7rem;
+	font-weight: 700;
+	transition: all linear 0.2s;
+    margin: 2px;
+}
+button:hover {
+	transform: scale(1.05);
+	border-radius: 10px;
+	animation: 0.5s linear gummy-btn-hover;
+	cursor: pointer;
+}
+button:active {
+	transform: scale(0.9);
+	border-radius: 20px;
+	animation: 0.2s linear gummy-btn-press;
+}
+
+button:before {
+	content: "";
+	position: absolute;
+	top: 5px;
+	right: 12px;
+	width: 70%;
+	height: 4px;
+	background-color: #fff;
+	border-radius: 8px;
+}
+
+/*
+	These are simply just overglorified color classes...
+*/
+.gummy-cherry {
+	background-color: #f46;
+	border-color: #a24;
+}
+.gummy-strawberry {
+	background-color: #fad;
+	border-color: #d7b;
+}
+.gummy-raspberry {
+	background-color: #3df;
+	border-color: #57c;
+}
+.gummy-lemon {
+	background-color: #ff0;
+	border-color: #b90;
+}
+
+/* Fix for Smaller Screens */
+
+@media (max-height: 300px) {
+	body {
+		justify-content: flex-start;
+	}
+}
+
+/* Adjust for Reduced Motion */
+
+@media (prefers-reduced-motion: reduce) {
+	* {
+		transition: none !important;
+		animation-duration: 0.001s !important;
+	}
+}
