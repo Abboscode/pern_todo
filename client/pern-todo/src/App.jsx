@@ -5,7 +5,6 @@ import './assets/styles/style.css'
 import { TodoList } from './components/TodoList'
 
 function App() {
-  const [count, setCount] = useState(0)
   const Headers = ({ children }) => (
     <div class="concept concept-two">
       {children.split("").map((letter) => (
@@ -20,7 +19,7 @@ function App() {
 
   return (
     <><Background>
-      <Headers children="TODOLIST"></Headers>
+      <Headers children="T O D O L I S T"></Headers>
       <TodoList></TodoList>
     </Background> </>
   )

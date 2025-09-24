@@ -3,7 +3,7 @@ import { use } from "react";
 import { useEffect, useState } from "react";
 import Spinner from 'react-bootstrap/Spinner';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import '../assets/styles/style-list.css'
 
 export const TodoList = () => {
     const [todos, setTodos] = useState([])
@@ -22,7 +22,7 @@ export const TodoList = () => {
             console.error(err.message)
         }
     };
-    const todoString = ["T", "O", "D", "O", " ", "L", "I", "S", "T"]
+    
 
     useEffect(() => {
 
@@ -39,7 +39,12 @@ export const TodoList = () => {
     }
 
     return (
-        <div className="container">
-            <h1>asdasasdas</h1></div>
+        <ol class="alternating-colors">{todos.map(todo => (
+            
+                <li>
+                <strong>{todo.description}</strong>
+            </li>
+        ))}
+            </ol>
     )
 }
