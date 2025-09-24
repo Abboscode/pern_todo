@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './assets/styles/style.css'
 import { TodoList } from './components/TodoList'
+import Addtodo from './components/Addtodo'
 
 function App() {
   const Headers = ({ children }) => (
@@ -20,6 +21,7 @@ function App() {
   return (
     <><Background>
       <Headers children="T O D O L I S T"></Headers>
+      <Addtodo></Addtodo>
       <TodoList></TodoList>
     </Background> </>
   )
