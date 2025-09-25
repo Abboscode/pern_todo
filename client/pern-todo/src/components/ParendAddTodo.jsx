@@ -56,9 +56,9 @@ const ParentAddTodo= () => {
     }
 
     const deleteOptimistically = async (id) => 
-    { 
+    {  setListTodo((prevTodos) => prevTodos.filter((todo) => todo.id !== id));
         const response = await fetch(`http://localhost:5000/todos/${id}`, {method: "DELETE"});
-      setListTodo((prevTodos) => prevTodos.filter((todo) => todo.id !== id));
+     
         if (response.ok) {
              
             console.log(response.json());
