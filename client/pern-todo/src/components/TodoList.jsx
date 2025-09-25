@@ -8,7 +8,7 @@ import '../assets/styles/style-button.css'
  const TodoList = ({listTodo}) => {
     const [todos, setTodos] = useState([])
     const [loading, setLoading] = useState(true)
-    
+  
 
     useEffect(() => {
         
@@ -30,10 +30,10 @@ import '../assets/styles/style-button.css'
     return (
 
         <div className="container-list">
-        <ol className="alternating-colors">{todos.map(todo => (
+        <ol className="alternating-colors">{todos.map((todo,index) => (
             
                 <li key={todo.id} className="todo-item">
-                <span className="circle-number">{todo.id}</span>
+                <span className="circle-number">{index+1}</span>
                 <strong>{todo.description}</strong>
                 <div style={{margin:"10px"}}><button className="button-default gummy-raspberry">Edit</button>
                 <button className="button-default gummy-cherry">Delete</button>
