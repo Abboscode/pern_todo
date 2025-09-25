@@ -1,19 +1,16 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import React from 'react'
 import './assets/styles/style.css'
-import { TodoList } from './components/TodoList'
-import Addtodo from './components/Addtodo'
+import ParentAddTodo from './components/ParendAddTodo'
 
 function App() {
   const Headers = ({ children }) => (
-    <div class="concept concept-two">
+    <div className="concept concept-two">
       {children.split("").map((letter) => (
-        <div class="hover"><h1>{letter}</h1></div>))}
+        <div key={crypto.randomUUID()} className="hover"><h1>{letter}</h1></div>))}
     </div>
   );
-  const Background = ({children}) => (
-    <div class="concept-two-background">{children}</div>
+  const Background = ({ children }) => (
+    <div className="concept-two-background">{children}</div>
 
   )
 
@@ -21,8 +18,7 @@ function App() {
   return (
     <><Background>
       <Headers children="T O D O L I S T"></Headers>
-      <Addtodo></Addtodo>
-      <TodoList></TodoList>
+      <ParentAddTodo></ParentAddTodo>
     </Background> </>
   )
 }

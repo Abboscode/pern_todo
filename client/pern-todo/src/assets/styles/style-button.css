@@ -52,7 +52,7 @@ html {
 }
 
 
-button {
+.button-default {
 	position: relative;
 	padding: 8px;
 	background-color: #4f5;
