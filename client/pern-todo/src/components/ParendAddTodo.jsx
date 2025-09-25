@@ -34,9 +34,11 @@ const ParentAddTodo= () => {
                 body: JSON.stringify({ description: newTodo })
             });
             if (response.status === 201) {
-                
+                console.log(listTodo);
                 const data = await response.json();
-            
+                setListTodo((prevTodos) => prevTodos.map((todo) =>
+                    todo.id === tempTodo.id ? data : todo
+                ));
                 console.log(data);
                 
 
@@ -52,9 +54,21 @@ const ParentAddTodo= () => {
 
     }
 
+    const deleteOptimistically = async (id) => 
+    {
+        const response = await fetch(`http://localhost:5000/todos/${id}`, {method: "DELETE"});
+        if (response.ok) {
+            setListTodo((prevTodos) => prevTodos.filter((todo) => todo.id !== id));
+        } else {
+            console.error("Failed to delete todo");
+        }
+
+
+
+    }
     return <>
         <Addtodo onAdd={addToDoOptimistickly}></Addtodo>
-        <TodoList listTodo={listTodo} ></TodoList>
+        <TodoList listTodo={listTodo} onDelete={deleteOptimistically}></TodoList>
 
 
     </>

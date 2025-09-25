@@ -16,7 +16,8 @@ app.post("/todos", async (req, res) => {
 
         const { description } = req.body
         const newTodo = await pool.query("INSERT INTO todo (description) VALUES($1) RETURNING *", [description])
-        res.json(newTodo.rows[0].id)
+        res.json(newTodo.rows[0]).
+        res.status(201).json(newTodo.rows[0])
 
     } catch (err) {
         console.error(err.message)
@@ -44,7 +45,14 @@ app.get("/todos/:id", async (req, res) => {
 })
 
 
-
+app.delete("/todos/:id", async (req, res) => {
+    try {
+        const { id } = req.params
+        const deleteTodo = await pool.query("DELETE FROM todo WHERE id = $1", [id])
+        res.json("Todo was deleted")
+    } catch (err) {
+        console.error(err.message)
+    }   })
 
 app.listen(PORT, () => {
     console.log(`server has started on port ${PORT}`)
