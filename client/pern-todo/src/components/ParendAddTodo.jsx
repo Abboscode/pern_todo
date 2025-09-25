@@ -3,6 +3,7 @@ import { useState } from "react";
 import  TodoList  from "./TodoList";
 import Addtodo  from "./Addtodo";
 
+
 const ParentAddTodo= () => {
 
     const [listTodo, setListTodo] = useState([])
@@ -55,10 +56,13 @@ const ParentAddTodo= () => {
     }
 
     const deleteOptimistically = async (id) => 
-    {
+    { 
         const response = await fetch(`http://localhost:5000/todos/${id}`, {method: "DELETE"});
+      setListTodo((prevTodos) => prevTodos.filter((todo) => todo.id !== id));
         if (response.ok) {
-            setListTodo((prevTodos) => prevTodos.filter((todo) => todo.id !== id));
+             
+            console.log(response.json());
+            
         } else {
             console.error("Failed to delete todo");
         }
