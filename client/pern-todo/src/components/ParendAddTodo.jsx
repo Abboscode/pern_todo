@@ -71,6 +71,7 @@ const ParentAddTodo= () => {
 
     }
     return <>
+    
         <Addtodo onAdd={addToDoOptimistickly}></Addtodo>
         <TodoList listTodo={listTodo} onDelete={deleteOptimistically}></TodoList>
 

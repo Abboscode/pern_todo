@@ -2,15 +2,28 @@
 :focus {
   outline: none;
 }
-
+form {
+  margin: auto;
+  
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  ;
+}
+ 
 /* necessary to give position: relative to parent. */
 input[type="text"] {
   font: 15px/24px "Muli", sans-serif;
-  color: #333;
+  color: #ccc8c8;
   width: 100%;
   box-sizing: border-box;
   letter-spacing: 1px;
-  background: transparent;
+  opacity: 0.85;
+  margin: auto;
+  padding: 5px 0 5px 5px;
+  
+  ;
 }
 
 :focus {
@@ -19,10 +32,11 @@ input[type="text"] {
 
 .col-3 {
   float: left;
-  width: 27.33%;
+ /* width: 27.33%;*/
   margin: 40px 3%;
   position: relative;
-  display: flex;
+  width: 25%;
+  display: block;
 } /* necessary to give position: relative to parent. */
 
 
@@ -48,7 +62,7 @@ input[type="text"] {
 .effect-3 ~ .focus-border:before,
 .effect-3 ~ .focus-border:after {
   content: "";
-  position: absolute;
+  position:absolute;
   bottom: 0;
   left: 0;
   width: 0;

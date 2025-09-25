@@ -10,13 +10,13 @@ function App() {
     </div>
   );
   const Background = ({ children }) => (
-    <div className="concept-two-background">{children}</div>
+    <div className="concept-two-background" >{children}</div>
 
   )
 
 
   return (
-    <><Background>
+    <><Background >
       <Headers children="TODOLIST"></Headers>
       <ParentAddTodo></ParentAddTodo>
     </Background> </>
