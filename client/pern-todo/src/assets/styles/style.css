@@ -100,8 +100,9 @@ h1 {
 
 .concept-two {
     display: inline-flex;
-    /* grid:100% repeat(6, 1fr); /* Set to your word length */
-    padding: 1em 2em;
+    grid:100% repeat(6, 1fr); /* Set to your word length */
+    padding: 10em 2em;
+    padding-bottom: 0;
     height: fit-content;
 
 }

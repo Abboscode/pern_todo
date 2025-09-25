@@ -24,14 +24,7 @@ input[type="text"] {
   position: relative;
   display: flex;
 } /* necessary to give position: relative to parent. */
-input[type="text"] {
-  font-size: 20px;
-  font-family: "Sour Gummy", sans-serif;
-  color: #0c0101;
-  width: 100%;
-  box-sizing: border-box;
-  letter-spacing: 1px;
-}
+
 
 .effect-1,
 .effect-2,

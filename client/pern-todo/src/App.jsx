@@ -17,7 +17,7 @@ function App() {
 
   return (
     <><Background>
-      <Headers children="T O D O L I S T"></Headers>
+      <Headers children="TODOLIST"></Headers>
       <ParentAddTodo></ParentAddTodo>
     </Background> </>
   )

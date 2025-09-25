@@ -23,7 +23,7 @@ ol {
 
 
 strong {
-  color: #a39800;
+  color: #fffffd;
 }
 
 
@@ -34,9 +34,10 @@ strong {
   height: 42px;
   width: 42px;
   border-radius: 50%;
-  border: 2px solid #ddd;
+  border: 2px solid #046306;
   margin-right: 12px;
   font-size: 16px;
-  background: #fff;
-  color: #292929;
+  background:transparent;
+  color: #f5f0f0;
+  ;
 }

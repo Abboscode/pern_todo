@@ -56,14 +56,16 @@ html {
 	position: relative;
 	padding: 8px;
 	background-color: #4f5;
-	color: #000;
+	color: #eeecec;
 	border: 3px solid #0a0;
 	border-radius: 16px;
 	font-family: inherit;
 	font-size: 0.7rem;
-	font-weight: 700;
+	font-weight: 600;
 	transition: all linear 0.2s;
     margin: 2px;
+	opacity: 0.8;
+
 }
 button:hover {
 	transform: scale(1.05);
@@ -92,20 +94,20 @@ button:before {
 	These are simply just overglorified color classes...
 */
 .gummy-cherry {
-	background-color: #f46;
-	border-color: #a24;
+	background-color: rgb(106, 36, 49);
+	border-color: rgb(249, 245, 246);
 }
 .gummy-strawberry {
 	background-color: #fad;
 	border-color: #d7b;
 }
 .gummy-raspberry {
-	background-color: #3df;
-	border-color: #57c;
+	background-color: rgb(27, 72, 25);
+	border-color: rgb(249, 249, 250);
 }
 .gummy-lemon {
-	background-color: #ff0;
-	border-color: #b90;
+	background-color: rgb(149, 161, 14);
+	border-color: rgb(237, 238, 238);
 }
 
 /* Fix for Smaller Screens */
