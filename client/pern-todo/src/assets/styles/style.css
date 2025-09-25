@@ -95,8 +95,10 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items:center;
-    background-image: url(https://meowlivia.s3.us-east-2.amazonaws.com/codepen/background/forest.jpg);
-}
+   /* background-image: url(https://meowlivia.s3.us-east-2.amazonaws.com/codepen/background/forest.jpg);
+*/
+    background-image: url(C:\Users\VICTUS\Documents\Projects\pern_todo\client\pern-todo\src\assets\images\background-table.jpg);
+   }
 
 .concept-two {
     display: inline-flex;
